@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>BMI calculator</title>
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <form action="/bmi" method="POST">
+
+            <input type="text" name="height" placeholder="Your height (cm)">
+            <input type="text" name="weight" placeholder="Your weight (kg)">
+            <button type="submit">Calculate</button>
+
+            <!--(Injecting server data to HTML)-->
+            <p id="p1">Your BMI: <span><%= resultToRender.userBMI %></span></p>
+            <p id="p2">Your result: <span><%= resultToRender.result %></span></p>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
